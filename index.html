@@ -7,6 +7,12 @@
         <meta charset="UTF-8">
     </head>
     <style>
+        /* body {
+    background: url('https://ts4.tc.mm.bing.net/th/id/OIP-C.NemEUyawXigVETtzjxrY4wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3') center/cover fixed;
+    min-height: 100vh;
+}
+ */
+
         h1 {
             color:blue;
             text-align: center;
@@ -33,10 +39,29 @@
         background-color:#2F5DF2;
         color: WHITE
     }
+    #video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        /* 内容层 */
+        .content {
+            position: relative; /* 确保在视频上面 */
+            z-index: 1;
+            padding: 20px;
+        }
     </style>
 <body>
+    <video id="video-bg" autoplay muted loop>
+        <source src="世界很温柔—《龙族》上杉绘梨衣.mp4" type="video/mp4">
+    </video>
     <h1>欢迎来到断桥烟雨的网页，注册一个你的账号吧~</h1>
-    
+    <div class="content">
     <form action="javascript:alert('注册成功')">
     <table>
         <tr>
@@ -105,7 +130,7 @@
             </td>
             <td>
                 <input type="text" placeholder="请输入六位验证码" length="6" required>
-                
+                .mp4
             </td>
         </tr>
         <tr>
@@ -121,5 +146,6 @@
         
     </table>
 </form>
+    </div>
 </body>
 </html>
